@@ -15,4 +15,4 @@
 -- | Brighton Park          | 678      |
 -- | Burnside               | 10       |
 
-
+SELECT l.neighborhood, COUNT(r.*) FROM listings AS l INNER JOIN reviews AS r ON l.id=r.listing_id GROUP BY l.neighborhood;
